@@ -3,7 +3,7 @@ on:
   schedule: [{ cron: "0 0 * * *" }]
   workflow_dispatch:
   push: { branches: ["main", "master"] }
-
+ 
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
@@ -11,7 +11,7 @@ jobs:
       name: production
     permissions: { contents: write }
     steps:
-      - name: 📊 Generate profile card
+      - name: Generate profile card
         uses: lowlighter/metrics@latest
         with:
          
@@ -19,7 +19,8 @@ jobs:
           user:  ${{ github.repository_owner }} 
           base:  ""                             
           filename: metrics.svg                 
-
+    
+    
           # — languages plugin —
           plugin_languages: yes
           plugin_languages_limit: 16
