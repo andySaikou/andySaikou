@@ -46,3 +46,8 @@ jobs:
 
           # recently used
           # plugin_languages_sections: recently-used
+
+          # set for more indepth
+
+          plugin_languages_analysis_timeout: 60
+          plugin_languages_analysis_timeout_repositories: 15
