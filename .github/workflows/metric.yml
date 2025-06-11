@@ -1,6 +1,6 @@
 name: Metrics
 on:
-  schedule: [{ cron: "0 0 * * *" }]
+  schedule: [{ cron: "0 0/24 * * *" }]
   workflow_dispatch:
   push: { branches: ["main", "master"] }
  
@@ -16,11 +16,10 @@ jobs:
         with:
          
           token: ${{ secrets.METRICS_TOKEN }}   
-          user:  ${{ github.repository_owner }} 
-          base:  ""                             
-          filename: metrics.svg                 
+          user:  Johnnyallen07
+          base:  ""                                      
     
-    
+
           # — languages plugin —
           plugin_languages: yes
           plugin_languages_limit: 16
