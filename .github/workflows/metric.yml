@@ -38,5 +38,4 @@ jobs:
 
           # detect the total line of code
           plugin_languages_indepth: yes
-          plugin_languages_limit: 8
           plugin_languages_analysis_timeout: 15
