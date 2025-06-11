@@ -1,6 +1,6 @@
 name: Metrics
 on:
-  schedule: [{ cron: "0 0 * * *" }]
+  schedule: [{cron: "0 0/24 * * *"}]
   workflow_dispatch:
   push: { branches: ["main", "master"] }
 
@@ -15,19 +15,24 @@ jobs:
         with:
          
           token: ${{ secrets.METRICS_TOKEN }}   
-          user:  ${{ github.repository_owner }} 
+          user:  Johnnyallen07
           base: header, activity, community, repositories, metadata
           template: classic                          
           filename: metrics.svg                 
 
           # — languages plugin —
           plugin_languages: yes
+          plugin_languages_colors: github
           plugin_languages_limit: 8
-          plugin_languages_ignored: >-
-            html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell, gnuplot
+          plugin_languages_sections: most-used
+          plugin_languages_ignored: html, css
+          plugin_languages_details: percentage #, lines
+          plugin_languages_indepth: yes
+          plugin_languages_analysis_timeout: 30
 
           # — achievements plugin —
           plugin_achievements: yes
-          plugin_achievements_only: sponsor, maintainer, octonaut
+          plugin_achievements_threshold: X
+          plugin_achievements_limit: 16
           plugin_achievements_display: detailed
-          plugin_achievements_threshold: X          # show even the locked ones
+  
