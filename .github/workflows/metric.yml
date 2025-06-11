@@ -43,3 +43,6 @@ jobs:
 
           # add org
           repositories_affiliations: owner, organization_member
+
+          # recently used
+          plugin_languages_sections: recently-used
