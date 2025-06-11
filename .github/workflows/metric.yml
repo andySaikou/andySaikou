@@ -11,8 +11,8 @@ jobs:
       name: production
     permissions: { contents: write }
     steps:
-      - name: 📊 Generate profile card
-        uses: lowlighter/metrics@latest
+      - name: Generate profile card
+        - uses: stalomeow/metrics@projects-v2
         with:
          
           token: ${{ secrets.METRICS_TOKEN }}   
