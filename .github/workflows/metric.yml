@@ -44,12 +44,12 @@ jobs:
           repositories_affiliations: owner, organization_member
 
           # recently used
-          # plugin_languages_sections: recently-used
+          plugin_languages_sections: most-used, recently-used
 
           # set for more indepth
 
           plugin_languages_analysis_timeout: 60
           plugin_languages_analysis_timeout_repositories: 15
 
-          # add all visibility
-          repositories_visibility: all
+        
+    
