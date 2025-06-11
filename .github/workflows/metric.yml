@@ -16,7 +16,7 @@ jobs:
         with:
          
           token: ${{ secrets.METRICS_TOKEN }}   
-          user:  Johnnyallen07        
+          user:  andySaikou        
 
           # classic template"
           base: header, activity, community, repositories, metadata
