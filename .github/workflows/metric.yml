@@ -16,17 +16,18 @@ jobs:
          
           token: ${{ secrets.METRICS_TOKEN }}   
           user:  ${{ github.repository_owner }} 
-          base:  ""                             
+          base: header, activity, community, repositories, metadata
+          template: classic                          
           filename: metrics.svg                 
 
           # — languages plugin —
           plugin_languages: yes
-          plugin_languages_limit: 4
+          plugin_languages_limit: 8
           plugin_languages_ignored: >-
             html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell, gnuplot
 
           # — achievements plugin —
           plugin_achievements: yes
           plugin_achievements_only: sponsor, maintainer, octonaut
-          plugin_achievements_display: compact      # optional – nice with many badges
+          plugin_achievements_display: detailed
           plugin_achievements_threshold: X          # show even the locked ones
